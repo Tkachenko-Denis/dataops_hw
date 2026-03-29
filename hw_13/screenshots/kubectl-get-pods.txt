@@ -1,0 +1,3 @@
+﻿NAME                            READY   STATUS    RESTARTS   AGE
+hw13-service-849775c58c-69n8v   1/1     Running   0          3m15s
+hw13-service-849775c58c-rpxl2   1/1     Running   0          3m15s

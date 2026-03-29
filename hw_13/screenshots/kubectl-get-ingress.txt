@@ -1,0 +1,2 @@
+﻿NAME           CLASS   HOSTS         ADDRESS     PORTS   AGE
+hw13-service   nginx   example.com   localhost   80      3m16s

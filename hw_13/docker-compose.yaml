@@ -1,0 +1,6 @@
+services:
+  web:
+    image: denisdataops/hw13-service:latest
+    container_name: hw13-service
+    ports:
+      - "8000:8000"
