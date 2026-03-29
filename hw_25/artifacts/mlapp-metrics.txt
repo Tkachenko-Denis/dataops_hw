@@ -1,0 +1,68 @@
+# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 1429.0
+python_gc_objects_collected_total{generation="1"} 189.0
+python_gc_objects_collected_total{generation="2"} 60.0
+# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
+# TYPE python_gc_objects_uncollectable_total counter
+python_gc_objects_uncollectable_total{generation="0"} 0.0
+python_gc_objects_uncollectable_total{generation="1"} 0.0
+python_gc_objects_uncollectable_total{generation="2"} 0.0
+# HELP python_gc_collections_total Number of times this generation was collected
+# TYPE python_gc_collections_total counter
+python_gc_collections_total{generation="0"} 508.0
+python_gc_collections_total{generation="1"} 46.0
+python_gc_collections_total{generation="2"} 4.0
+# HELP python_info Python platform information
+# TYPE python_info gauge
+python_info{implementation="CPython",major="3",minor="11",patchlevel="15",version="3.11.15"} 1.0
+# HELP process_virtual_memory_bytes Virtual memory size in bytes.
+# TYPE process_virtual_memory_bytes gauge
+process_virtual_memory_bytes 2.02584064e+09
+# HELP process_resident_memory_bytes Resident memory size in bytes.
+# TYPE process_resident_memory_bytes gauge
+process_resident_memory_bytes 2.68365824e+08
+# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.
+# TYPE process_start_time_seconds gauge
+process_start_time_seconds 1.77481160857e+09
+# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
+# TYPE process_cpu_seconds_total counter
+process_cpu_seconds_total 5.21
+# HELP process_open_fds Number of open file descriptors.
+# TYPE process_open_fds gauge
+process_open_fds 15.0
+# HELP process_max_fds Maximum number of open file descriptors.
+# TYPE process_max_fds gauge
+process_max_fds 1.048576e+06
+# HELP starlette_requests_in_progress Total HTTP requests currently in progress
+# TYPE starlette_requests_in_progress gauge
+starlette_requests_in_progress{app_name="hw24-diabetes-service",method="GET"} 1.0
+# HELP starlette_requests_total Total HTTP requests
+# TYPE starlette_requests_total counter
+starlette_requests_total{app_name="hw24-diabetes-service",method="GET",path="/metrics",status_code="200"} 6.0
+# HELP starlette_requests_created Total HTTP requests
+# TYPE starlette_requests_created gauge
+starlette_requests_created{app_name="hw24-diabetes-service",method="GET",path="/metrics",status_code="200"} 1.77481162393802e+09
+# HELP starlette_request_duration_seconds HTTP request duration, in seconds
+# TYPE starlette_request_duration_seconds histogram
+starlette_request_duration_seconds_bucket{app_name="hw24-diabetes-service",le="0.005",method="GET",path="/metrics",status_code="200"} 6.0
+starlette_request_duration_seconds_bucket{app_name="hw24-diabetes-service",le="0.01",method="GET",path="/metrics",status_code="200"} 6.0
+starlette_request_duration_seconds_bucket{app_name="hw24-diabetes-service",le="0.025",method="GET",path="/metrics",status_code="200"} 6.0
+starlette_request_duration_seconds_bucket{app_name="hw24-diabetes-service",le="0.05",method="GET",path="/metrics",status_code="200"} 6.0
+starlette_request_duration_seconds_bucket{app_name="hw24-diabetes-service",le="0.075",method="GET",path="/metrics",status_code="200"} 6.0
+starlette_request_duration_seconds_bucket{app_name="hw24-diabetes-service",le="0.1",method="GET",path="/metrics",status_code="200"} 6.0
+starlette_request_duration_seconds_bucket{app_name="hw24-diabetes-service",le="0.25",method="GET",path="/metrics",status_code="200"} 6.0
+starlette_request_duration_seconds_bucket{app_name="hw24-diabetes-service",le="0.5",method="GET",path="/metrics",status_code="200"} 6.0
+starlette_request_duration_seconds_bucket{app_name="hw24-diabetes-service",le="0.75",method="GET",path="/metrics",status_code="200"} 6.0
+starlette_request_duration_seconds_bucket{app_name="hw24-diabetes-service",le="1.0",method="GET",path="/metrics",status_code="200"} 6.0
+starlette_request_duration_seconds_bucket{app_name="hw24-diabetes-service",le="2.5",method="GET",path="/metrics",status_code="200"} 6.0
+starlette_request_duration_seconds_bucket{app_name="hw24-diabetes-service",le="5.0",method="GET",path="/metrics",status_code="200"} 6.0
+starlette_request_duration_seconds_bucket{app_name="hw24-diabetes-service",le="7.5",method="GET",path="/metrics",status_code="200"} 6.0
+starlette_request_duration_seconds_bucket{app_name="hw24-diabetes-service",le="10.0",method="GET",path="/metrics",status_code="200"} 6.0
+starlette_request_duration_seconds_bucket{app_name="hw24-diabetes-service",le="+Inf",method="GET",path="/metrics",status_code="200"} 6.0
+starlette_request_duration_seconds_count{app_name="hw24-diabetes-service",method="GET",path="/metrics",status_code="200"} 6.0
+starlette_request_duration_seconds_sum{app_name="hw24-diabetes-service",method="GET",path="/metrics",status_code="200"} 0.009594312000444916
+# HELP starlette_request_duration_seconds_created HTTP request duration, in seconds
+# TYPE starlette_request_duration_seconds_created gauge
+starlette_request_duration_seconds_created{app_name="hw24-diabetes-service",method="GET",path="/metrics",status_code="200"} 1.7748116239380512e+09
+

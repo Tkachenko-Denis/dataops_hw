@@ -7,6 +7,7 @@ import mlflow.sklearn
 import numpy as np
 from fastapi import FastAPI
 from pydantic import BaseModel, Field
+from starlette_exporter import PrometheusMiddleware, handle_metrics
 
 
 MODEL_DIR = Path(os.getenv("MODEL_DIR", "/app/model"))
@@ -32,6 +33,8 @@ def load_model():
 
 
 app = FastAPI(title="hw24-diabetes-service")
+app.add_middleware(PrometheusMiddleware, app_name="hw24-diabetes-service")
+app.add_route("/metrics", handle_metrics)
 model = load_model()
 
 

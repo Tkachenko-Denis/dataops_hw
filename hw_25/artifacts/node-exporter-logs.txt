@@ -1,0 +1,55 @@
+hw25-node-exporter  | time=2026-03-29T19:13:29.344Z level=INFO source=node_exporter.go:216 msg="Starting node_exporter" version="(version=1.10.2, branch=HEAD, revision=654f19dee6a0c41de78a8d6d870e8c742cdb43b9)"
+hw25-node-exporter  | time=2026-03-29T19:13:29.345Z level=INFO source=node_exporter.go:217 msg="Build context" build_context="(go=go1.25.3, platform=linux/amd64, user=root@b29b4019149a, date=20251025-20:05:32, tags=unknown)"
+hw25-node-exporter  | time=2026-03-29T19:13:29.345Z level=INFO source=diskstats_common.go:110 msg="Parsed flag --collector.diskstats.device-exclude" collector=diskstats flag=^(z?ram|loop|fd|(h|s|v|xv)d[a-z]|nvme\d+n\d+p)\d+$
+hw25-node-exporter  | time=2026-03-29T19:13:29.346Z level=ERROR source=diskstats_linux.go:256 msg="Failed to open directory, disabling udev device properties" collector=diskstats path=/run/udev/data
+hw25-node-exporter  | time=2026-03-29T19:13:29.346Z level=INFO source=filesystem_common.go:265 msg="Parsed flag --collector.filesystem.mount-points-exclude" collector=filesystem flag=^/(dev|proc|run/credentials/.+|sys|var/lib/docker/.+|var/lib/containers/storage/.+)($|/)
+hw25-node-exporter  | time=2026-03-29T19:13:29.346Z level=INFO source=filesystem_common.go:294 msg="Parsed flag --collector.filesystem.fs-types-exclude" collector=filesystem flag=^(autofs|binfmt_misc|bpf|cgroup2?|configfs|debugfs|devpts|devtmpfs|fusectl|hugetlbfs|iso9660|mqueue|nsfs|overlay|proc|procfs|pstore|rpc_pipefs|securityfs|selinuxfs|squashfs|erofs|sysfs|tracefs)$
+hw25-node-exporter  | time=2026-03-29T19:13:29.346Z level=INFO source=node_exporter.go:135 msg="Enabled collectors"
+hw25-node-exporter  | time=2026-03-29T19:13:29.346Z level=INFO source=node_exporter.go:141 msg=arp
+hw25-node-exporter  | time=2026-03-29T19:13:29.346Z level=INFO source=node_exporter.go:141 msg=bcache
+hw25-node-exporter  | time=2026-03-29T19:13:29.346Z level=INFO source=node_exporter.go:141 msg=bonding
+hw25-node-exporter  | time=2026-03-29T19:13:29.346Z level=INFO source=node_exporter.go:141 msg=btrfs
+hw25-node-exporter  | time=2026-03-29T19:13:29.346Z level=INFO source=node_exporter.go:141 msg=conntrack
+hw25-node-exporter  | time=2026-03-29T19:13:29.346Z level=INFO source=node_exporter.go:141 msg=cpu
+hw25-node-exporter  | time=2026-03-29T19:13:29.346Z level=INFO source=node_exporter.go:141 msg=cpufreq
+hw25-node-exporter  | time=2026-03-29T19:13:29.346Z level=INFO source=node_exporter.go:141 msg=diskstats
+hw25-node-exporter  | time=2026-03-29T19:13:29.346Z level=INFO source=node_exporter.go:141 msg=dmi
+hw25-node-exporter  | time=2026-03-29T19:13:29.346Z level=INFO source=node_exporter.go:141 msg=edac
+hw25-node-exporter  | time=2026-03-29T19:13:29.346Z level=INFO source=node_exporter.go:141 msg=entropy
+hw25-node-exporter  | time=2026-03-29T19:13:29.346Z level=INFO source=node_exporter.go:141 msg=fibrechannel
+hw25-node-exporter  | time=2026-03-29T19:13:29.346Z level=INFO source=node_exporter.go:141 msg=filefd
+hw25-node-exporter  | time=2026-03-29T19:13:29.347Z level=INFO source=node_exporter.go:141 msg=filesystem
+hw25-node-exporter  | time=2026-03-29T19:13:29.347Z level=INFO source=node_exporter.go:141 msg=hwmon
+hw25-node-exporter  | time=2026-03-29T19:13:29.347Z level=INFO source=node_exporter.go:141 msg=infiniband
+hw25-node-exporter  | time=2026-03-29T19:13:29.347Z level=INFO source=node_exporter.go:141 msg=ipvs
+hw25-node-exporter  | time=2026-03-29T19:13:29.347Z level=INFO source=node_exporter.go:141 msg=loadavg
+hw25-node-exporter  | time=2026-03-29T19:13:29.347Z level=INFO source=node_exporter.go:141 msg=mdadm
+hw25-node-exporter  | time=2026-03-29T19:13:29.347Z level=INFO source=node_exporter.go:141 msg=meminfo
+hw25-node-exporter  | time=2026-03-29T19:13:29.347Z level=INFO source=node_exporter.go:141 msg=netclass
+hw25-node-exporter  | time=2026-03-29T19:13:29.347Z level=INFO source=node_exporter.go:141 msg=netdev
+hw25-node-exporter  | time=2026-03-29T19:13:29.347Z level=INFO source=node_exporter.go:141 msg=netstat
+hw25-node-exporter  | time=2026-03-29T19:13:29.347Z level=INFO source=node_exporter.go:141 msg=nfs
+hw25-node-exporter  | time=2026-03-29T19:13:29.347Z level=INFO source=node_exporter.go:141 msg=nfsd
+hw25-node-exporter  | time=2026-03-29T19:13:29.347Z level=INFO source=node_exporter.go:141 msg=nvme
+hw25-node-exporter  | time=2026-03-29T19:13:29.347Z level=INFO source=node_exporter.go:141 msg=os
+hw25-node-exporter  | time=2026-03-29T19:13:29.347Z level=INFO source=node_exporter.go:141 msg=powersupplyclass
+hw25-node-exporter  | time=2026-03-29T19:13:29.347Z level=INFO source=node_exporter.go:141 msg=pressure
+hw25-node-exporter  | time=2026-03-29T19:13:29.347Z level=INFO source=node_exporter.go:141 msg=rapl
+hw25-node-exporter  | time=2026-03-29T19:13:29.347Z level=INFO source=node_exporter.go:141 msg=schedstat
+hw25-node-exporter  | time=2026-03-29T19:13:29.347Z level=INFO source=node_exporter.go:141 msg=selinux
+hw25-node-exporter  | time=2026-03-29T19:13:29.347Z level=INFO source=node_exporter.go:141 msg=sockstat
+hw25-node-exporter  | time=2026-03-29T19:13:29.347Z level=INFO source=node_exporter.go:141 msg=softnet
+hw25-node-exporter  | time=2026-03-29T19:13:29.347Z level=INFO source=node_exporter.go:141 msg=stat
+hw25-node-exporter  | time=2026-03-29T19:13:29.347Z level=INFO source=node_exporter.go:141 msg=tapestats
+hw25-node-exporter  | time=2026-03-29T19:13:29.347Z level=INFO source=node_exporter.go:141 msg=textfile
+hw25-node-exporter  | time=2026-03-29T19:13:29.347Z level=INFO source=node_exporter.go:141 msg=thermal_zone
+hw25-node-exporter  | time=2026-03-29T19:13:29.347Z level=INFO source=node_exporter.go:141 msg=time
+hw25-node-exporter  | time=2026-03-29T19:13:29.347Z level=INFO source=node_exporter.go:141 msg=timex
+hw25-node-exporter  | time=2026-03-29T19:13:29.347Z level=INFO source=node_exporter.go:141 msg=udp_queues
+hw25-node-exporter  | time=2026-03-29T19:13:29.347Z level=INFO source=node_exporter.go:141 msg=uname
+hw25-node-exporter  | time=2026-03-29T19:13:29.347Z level=INFO source=node_exporter.go:141 msg=vmstat
+hw25-node-exporter  | time=2026-03-29T19:13:29.347Z level=INFO source=node_exporter.go:141 msg=watchdog
+hw25-node-exporter  | time=2026-03-29T19:13:29.347Z level=INFO source=node_exporter.go:141 msg=xfs
+hw25-node-exporter  | time=2026-03-29T19:13:29.347Z level=INFO source=node_exporter.go:141 msg=zfs
+hw25-node-exporter  | time=2026-03-29T19:13:29.350Z level=INFO source=tls_config.go:346 msg="Listening on" address=[::]:9100
+hw25-node-exporter  | time=2026-03-29T19:13:29.350Z level=INFO source=tls_config.go:349 msg="TLS is disabled." http2=false address=[::]:9100

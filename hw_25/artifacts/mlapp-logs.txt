@@ -1,0 +1,9 @@
+hw25-mlapp  | INFO:     Started server process [1]
+hw25-mlapp  | INFO:     Waiting for application startup.
+hw25-mlapp  | INFO:     Application startup complete.
+hw25-mlapp  | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+hw25-mlapp  | INFO:     172.25.0.4:44424 - "GET /metrics HTTP/1.1" 200 OK
+hw25-mlapp  | INFO:     172.25.0.1:35592 - "GET /metrics HTTP/1.1" 200 OK
+hw25-mlapp  | INFO:     172.25.0.4:45314 - "GET /metrics HTTP/1.1" 200 OK
+hw25-mlapp  | INFO:     172.25.0.4:46750 - "GET /metrics HTTP/1.1" 200 OK
+hw25-mlapp  | INFO:     172.25.0.4:41414 - "GET /metrics HTTP/1.1" 200 OK

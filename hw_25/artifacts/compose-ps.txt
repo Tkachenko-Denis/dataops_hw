@@ -1,0 +1,5 @@
+NAME                 IMAGE                       COMMAND                  SERVICE         CREATED          STATUS          PORTS
+hw25-grafana         grafana/grafana:latest      "/run.sh"                grafana         30 seconds ago   Up 28 seconds   0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp
+hw25-mlapp           hw_25-mlapp                 "python -m mlapp"        mlapp           30 seconds ago   Up 29 seconds   0.0.0.0:8012->8000/tcp, [::]:8012->8000/tcp
+hw25-node-exporter   prom/node-exporter:latest   "/bin/node_exporter …"   node-exporter   30 seconds ago   Up 29 seconds   0.0.0.0:9100->9100/tcp, [::]:9100->9100/tcp
+hw25-prometheus      prom/prometheus:latest      "/bin/prometheus --c…"   prometheus      30 seconds ago   Up 29 seconds   0.0.0.0:9090->9090/tcp, [::]:9090->9090/tcp

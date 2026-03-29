@@ -1,0 +1,1 @@
+{"status":"success","data":{"resultType":"vector","result":[{"metric":{"code":"200","handler":"/api/v1/query_range","instance":"prometheus:9090","job":"prometheus"},"value":[1774811746.024,"8.075869195639855"]}]}}

@@ -4,3 +4,4 @@ mlflow==3.10.1
 scikit-learn==1.8.0
 numpy==2.4.4
 pydantic==2.12.5
+starlette-exporter==0.23.0
