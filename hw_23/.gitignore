@@ -1,0 +1,4 @@
+artifacts/
+logs/
+plugins/
+dags/__pycache__/

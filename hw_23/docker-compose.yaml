@@ -1,0 +1,81 @@
+services:
+  db:
+    image: postgres:17
+    container_name: hw23-postgres
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "${POSTGRES_PORT}:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  airflow-db-init:
+    image: apache/airflow:2.10.5
+    container_name: hw23-airflow-db-init
+    depends_on:
+      db:
+        condition: service_healthy
+    environment: &airflow-common-env
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+      AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: "false"
+      AIRFLOW__CORE__FERNET_KEY: ${AIRFLOW_FERNET_KEY}
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}
+      AIRFLOW__WEBSERVER__EXPOSE_CONFIG: "true"
+    volumes: &airflow-common-volumes
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+    command: db init
+
+  airflow-db-migrate:
+    image: apache/airflow:2.10.5
+    container_name: hw23-airflow-db-migrate
+    depends_on:
+      db:
+        condition: service_healthy
+    environment: *airflow-common-env
+    volumes: *airflow-common-volumes
+    command: db migrate
+
+  airflow-webserver:
+    image: apache/airflow:2.10.5
+    container_name: hw23-airflow-webserver
+    depends_on:
+      db:
+        condition: service_healthy
+    environment: *airflow-common-env
+    volumes: *airflow-common-volumes
+    command: webserver
+    ports:
+      - "${AIRFLOW_WEBSERVER_PORT}:8080"
+
+  airflow-scheduler:
+    image: apache/airflow:2.10.5
+    container_name: hw23-airflow-scheduler
+    depends_on:
+      db:
+        condition: service_healthy
+    environment: *airflow-common-env
+    volumes: *airflow-common-volumes
+    command: scheduler
+
+  airflow-triggerer:
+    image: apache/airflow:2.10.5
+    container_name: hw23-airflow-triggerer
+    depends_on:
+      db:
+        condition: service_healthy
+    environment: *airflow-common-env
+    volumes: *airflow-common-volumes
+    command: triggerer
+
+volumes:
+  postgres_data:
