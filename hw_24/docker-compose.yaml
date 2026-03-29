@@ -1,0 +1,8 @@
+services:
+  mlapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: hw24-mlapp
+    ports:
+      - "8011:8000"

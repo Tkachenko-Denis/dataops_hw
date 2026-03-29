@@ -1,0 +1,4 @@
+﻿{'run_id': 'd9b480de404c411d8f3471c8bc091953', 'mae': 44.75202247191012, 'model_uri': 'models:/m-65853b6cb5314386b862b6a2adc2cd73'}
+🏃 View run random_forest_diabets at: http://127.0.0.1:5000/#/experiments/2/runs/d9b480de404c411d8f3471c8bc091953
+🧪 View experiment at: http://127.0.0.1:5000/#/experiments/2
+{'saved_model_dir': '/tmp/hw24model', 'version': 1}

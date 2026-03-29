@@ -1,0 +1,5 @@
+﻿hw24-mlapp  | INFO:     Started server process [1]
+hw24-mlapp  | INFO:     Waiting for application startup.
+hw24-mlapp  | INFO:     Application startup complete.
+hw24-mlapp  | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+hw24-mlapp  | INFO:     172.24.0.1:47254 - "GET /health HTTP/1.1" 200 OK

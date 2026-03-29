@@ -1,0 +1,21 @@
+﻿{
+  "registered_model": {
+    "name": "diabets",
+    "creation_timestamp": 1774810830983,
+    "last_updated_timestamp": 1774810831067,
+    "latest_versions": [
+      {
+        "name": "diabets",
+        "version": "1",
+        "creation_timestamp": 1774810831067,
+        "last_updated_timestamp": 1774810831067,
+        "current_stage": "None",
+        "description": "",
+        "source": "models:/m-65853b6cb5314386b862b6a2adc2cd73",
+        "run_id": "d9b480de404c411d8f3471c8bc091953",
+        "status": "READY",
+        "run_link": ""
+      }
+    ]
+  }
+}
