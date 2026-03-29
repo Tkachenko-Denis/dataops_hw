@@ -1,0 +1,22 @@
+replicaCount: 2
+
+image:
+  repository: denisdataops/hw13-service
+  tag: latest
+  pullPolicy: IfNotPresent
+
+resources:
+  enabled: true
+  requests:
+    cpu: 150m
+    memory: 192Mi
+  limits:
+    cpu: 300m
+    memory: 384Mi
+
+ingress:
+  enabled: true
+  className: nginx
+  host: hello.example.com
+  path: /
+  pathType: Prefix

@@ -1,0 +1,12 @@
+replicaCount: 1
+
+image:
+  repository: denisdataops/hw13-service
+  tag: latest
+  pullPolicy: IfNotPresent
+
+resources:
+  enabled: false
+
+ingress:
+  enabled: false

@@ -1,0 +1,30 @@
+replicaCount: 1
+
+image:
+  repository: denisdataops/hw13-service
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 8000
+
+resources:
+  enabled: true
+  requests:
+    cpu: 100m
+    memory: 128Mi
+  limits:
+    cpu: 250m
+    memory: 256Mi
+
+ingress:
+  enabled: true
+  className: nginx
+  host: example.com
+  path: /
+  pathType: Prefix
+
+health:
+  path: /health

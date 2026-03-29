@@ -1,0 +1,6 @@
+apiVersion: v2
+name: hello-world-chart
+description: Helm chart for the hw_13 hello-world service
+type: application
+version: 0.1.0
+appVersion: "latest"
